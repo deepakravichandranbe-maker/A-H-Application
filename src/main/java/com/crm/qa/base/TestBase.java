@@ -44,6 +44,7 @@ public class TestBase {
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
 			driver = new ChromeDriver(); 
+			System.out.println("The changes has been made in this code");
 		}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
@@ -62,7 +63,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		
+		System.out.println("The changes has been made in this code");
 		driver.get(prop.getProperty("url"));
 		
 	}
