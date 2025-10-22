@@ -25,6 +25,7 @@ public class TestBase {
 	
 	public TestBase(){
 		try {
+			System.out.println("The name is changed now");
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm"
 					+ "/qa/config/config.properties");
@@ -57,6 +58,7 @@ public class TestBase {
 		driver = e_driver;
 		
 		driver.manage().window().maximize();
+		System.out.println("The name is changed now");
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
